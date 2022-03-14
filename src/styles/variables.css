@@ -1,0 +1,6 @@
+:root {
+    --primary: rgb(1, 8, 17);
+    --text-primary: #ffffff;
+    --font-sans: 'proxima-nova', sans-serif;
+    --scrollbar-width: 14px;
+}

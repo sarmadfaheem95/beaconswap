@@ -1,0 +1,17 @@
+{
+  "name": "Beaconswap",
+  "short_name": "Beaconswap",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0D0415",
+  "background_color": "#0D0415",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "48x48",
+      "type": "image/ico",
+      "purpose": "any maskable"
+    }
+  ]
+}
