@@ -1,7 +1,7 @@
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import { ChainId } from '@sushiswap/core-sdk'
-import Button from 'app/components/Button'
+// import Button from 'app/components/Button'
 import ExternalLink from 'app/components/ExternalLink'
 import Search from 'app/components/Search'
 import Typography from 'app/components/Typography'
@@ -10,7 +10,7 @@ import FarmList from 'app/features/onsen/FarmList'
 import OnsenFilter from 'app/features/onsen/FarmMenu'
 import useFarmRewards from 'app/hooks/useFarmRewards'
 import useFuse from 'app/hooks/useFuse'
-import { TridentBody, TridentHeader } from 'app/layouts/Trident'
+import { TridentBody } from 'app/layouts/Trident'
 import { useActiveWeb3React } from 'app/services/web3'
 import { useRouter } from 'next/router'
 import React from 'react'
@@ -59,7 +59,7 @@ export default function Farm(): JSX.Element {
 
   return (
     <>
-      <TridentHeader className="sm:!flex-row justify-between items-center" pattern="bg-bubble">
+      {/* <TridentHeader className="sm:!flex-row justify-between items-center" pattern="bg-bubble">
         <div>
           <Typography variant="h2" className="text-high-emphesis" weight={700}>
             {i18n._(t`Onsen Menu`)}
@@ -79,7 +79,7 @@ export default function Farm(): JSX.Element {
             </a>
           </Button>
         </div>
-      </TridentHeader>
+      </TridentHeader> */}
       <TridentBody>
         <div className="flex flex-col w-full gap-6">
           <div className="flex flex-col sm:flex-row justify-between gap-4 items-center">
