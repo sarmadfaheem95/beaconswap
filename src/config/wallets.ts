@@ -5,8 +5,9 @@ import { NetworkConnector } from 'app/entities/connectors'
 
 import RPC from './rpc'
 
-const supportedChainIds = Object.values(ChainId) as number[]
+let supportedChainIds = Object.values(ChainId) as number[]
 
+supportedChainIds = supportedChainIds.filter((chainIdObj) => chainIdObj === ChainId.MOONBEAM)
 export const network = new NetworkConnector({
   defaultChainId: 1,
   urls: RPC,

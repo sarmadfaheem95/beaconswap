@@ -36,9 +36,9 @@ const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippag
 
   return (
     <div className="flex items-center justify-between mb-4 space-x-3">
-      <div className="flex rounded bg-dark-800 h-[46px]">
+      <div className="flex rounded bg-dark-800 h-[46px] bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark ">
         <NavLink
-          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink"
+          activeClassName="font-bold border rounded text-high-emphesis border-dark-800"
           href={`/${!isRemove ? 'add' : 'remove'}${input ? `/${currencyId(input)}` : ''}${
             output ? `/${currencyId(output)}` : ''
           }`}

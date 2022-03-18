@@ -79,7 +79,7 @@ export default function PoolFinder() {
   return (
     <Container id="find-pool-page" className="py-4 space-y-6 md:py-8 lg:py-12" maxWidth="2xl">
       <Head>
-        <title>{i18n._(t`Find Pool`)} | Sushi</title>
+        <title>{i18n._(t`Find Pool`)} | Beaconswap</title>
         <meta key="description" name="description" content="Find pool" />
         <meta key="twitter:description" name="twitter:description" content="Find pool" />
         <meta key="og:description" property="og:description" content="Find pool" />
@@ -98,7 +98,9 @@ export default function PoolFinder() {
             {i18n._(t`Use this tool to find pairs that don't automatically appear in the interface`)}
           </>
         }
-        type="information"
+        type="plain"
+        className="p-6 bg-blue"
+        dismissable={false}
       />
       <div className="relative p-4 space-y-4 rounded bg-dark-900 shadow-liquidity">
         <AutoColumn gap={'md'}>

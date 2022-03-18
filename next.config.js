@@ -138,7 +138,8 @@ const nextConfig = {
   },
   publicRuntimeConfig: {
     breakpoints: screens,
-  }
+  },
+  distDir: 'build',
 }
 
 const SentryWebpackPluginOptions = {

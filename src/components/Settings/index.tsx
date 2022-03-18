@@ -1,4 +1,4 @@
-import { CheckIcon, CogIcon } from '@heroicons/react/outline'
+import { CheckIcon } from '@heroicons/react/outline'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import { Percent } from '@sushiswap/core-sdk'
@@ -15,6 +15,7 @@ import useWalletSupportsOpenMev from 'app/hooks/useWalletSupportsOpenMev'
 import { useActiveWeb3React } from 'app/services/web3'
 import { useToggleSettingsMenu } from 'app/state/application/hooks'
 import { useExpertModeManager, useUserOpenMev, useUserSingleHopOnly } from 'app/state/user/hooks'
+import Image from 'next/image'
 import React, { FC, useState } from 'react'
 
 import { OPENMEV_ENABLED, OPENMEV_SUPPORTED_NETWORKS } from '../../config/openmev'
@@ -126,10 +127,8 @@ const SettingsTab: FC<SettingsTabProps> = ({ placeholderSlippage, className, tri
           </div>
         }
       >
-        <div
-          className={classNames(className, 'flex items-center justify-center w-10 h-10 rounded-full cursor-pointer')}
-        >
-          <CogIcon className="w-[26px] h-[26px] transform rotate-90 hover:text-white" />
+        <div className={classNames(className, 'flex items-center justify-center rounded-full cursor-pointer')}>
+          <Image src="https://www.linkpicture.com/q/setting.png" alt="Settings" width={50} height={50} />
         </div>
       </Popover>
       <HeadlessUiModal.Controlled isOpen={showConfirmation} onDismiss={() => setShowConfirmation(false)} maxWidth="md">

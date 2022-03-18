@@ -43,7 +43,7 @@ export default function Pool() {
   return (
     <Container id="pool-page" className="py-4 space-y-6 md:py-8 lg:py-12" maxWidth="2xl">
       <Head>
-        <title>Pool | Sushi</title>
+        <title>Pool | Beaconswap</title>
         <meta
           key="description"
           name="description"
@@ -71,10 +71,10 @@ export default function Pool() {
 
       <Alert
         title={i18n._(t`Liquidity Provider Rewards`)}
-        message={i18n._(t`Liquidity providers earn a 0.25% fee on all trades proportional to their share of
-                        the pool. Fees are added to the pool, accrue in real time and can be claimed by
-                        withdrawing your liquidity`)}
-        type="information"
+        message={`Liquidity providers earn 0.25% fee whenever a trade is made on StellaSwap proportional to their share of the pool. Fees are added to the pool and can be claimed anytime by withdrawing your liquidity.`}
+        type="plain"
+        className="px-6 py-10 bg-blue"
+        dismissable={false}
       />
 
       {!account ? (

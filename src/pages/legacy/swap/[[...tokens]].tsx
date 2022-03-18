@@ -1,4 +1,3 @@
-import { ArrowDownIcon } from '@heroicons/react/solid'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import { Currency, JSBI, Token, Trade as V2Trade, TradeType } from '@sushiswap/core-sdk'
@@ -31,6 +30,7 @@ import { useActiveWeb3React } from 'app/services/web3'
 import { Field, setRecipient } from 'app/state/swap/actions'
 import { useDefaultsFromURLSearch, useDerivedSwapInfo, useSwapActionHandlers, useSwapState } from 'app/state/swap/hooks'
 import { useExpertModeManager, useUserOpenMev, useUserSingleHopOnly } from 'app/state/user/hooks'
+import Image from 'next/image'
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import ReactGA from 'react-ga'
 
@@ -370,7 +370,7 @@ const Swap = ({ banners }) => {
       />
 
       <SwapLayoutCard>
-        <div className="px-2">
+        <div className="px-2 py-4">
           <HeaderNew inputCurrency={currencies[Field.INPUT]} outputCurrency={currencies[Field.OUTPUT]} />
         </div>
         <div className="flex flex-col gap-3">
@@ -389,16 +389,15 @@ const Swap = ({ banners }) => {
             onChange={handleTypeInput}
             onSelect={handleInputSelect}
           />
-          <div className="flex justify-center -mt-6 -mb-6 z-0">
+          <div className="flex justify-center z-0">
             <div
               role="button"
-              className="p-1.5 rounded-full bg-dark-800 border shadow-md border-dark-700 hover:border-dark-600"
               onClick={() => {
                 setApprovalSubmitted(false) // reset 2 step UI for approvals
                 onSwitchTokens()
               }}
             >
-              <ArrowDownIcon width={14} className="text-high-emphesis hover:text-white" />
+              <Image src="https://www.linkpicture.com/q/swap.png" height={50} width={50} alt="Swap icon" />
             </div>
           </div>
           <SwapAssetPanel
@@ -504,6 +503,8 @@ const Swap = ({ banners }) => {
             </div>
           ) : (
             <Button
+              variant="outlined"
+              className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark h-[38px]"
               color={isValid && priceImpactSeverity > 2 && !swapCallbackError ? 'red' : 'gradient'}
               fullWidth
               onClick={() => {
@@ -521,7 +522,6 @@ const Swap = ({ banners }) => {
               }}
               id="swap-button"
               disabled={!isValid || (priceImpactSeverity > 3 && !isExpertMode) || !!swapCallbackError}
-              className="rounded-2xl md:rounded"
             >
               {swapInputError
                 ? swapInputError

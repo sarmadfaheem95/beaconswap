@@ -57,7 +57,7 @@ const RecipientField: FC<RecipientField> = ({ recipient, action }) => {
       <div
         className={classNames(
           error ? 'ring ring-red' : '',
-          'flex justify-between items-baseline bg-dark-900 rounded px-4 py-3 border border-dark-700 hover:border-dark-600'
+          'flex justify-between items-baseline rounded px-4 py-3 border border-dark-700 hover:border-dark-600'
         )}
       >
         <Typography weight={700} variant="lg" className="flex gap-3 flex-grow items-baseline relative overflow-hidden">

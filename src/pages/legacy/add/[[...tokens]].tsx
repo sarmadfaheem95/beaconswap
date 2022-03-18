@@ -307,7 +307,7 @@ export default function Add() {
   return (
     <>
       <Head>
-        <title>Add Liquidity | Sushi</title>
+        <title>Add Liquidity | Beaconswap</title>
         <meta
           key="description"
           name="description"
@@ -371,7 +371,9 @@ export default function Add() {
               </>
             )
           }
-          type="information"
+          type="plain"
+          className="p-6 bg-blue"
+          dismissable={false}
         />
 
         <DoubleGlowShadow>
@@ -478,6 +480,7 @@ export default function Add() {
                             style={{
                               width: approvalB !== ApprovalState.APPROVED ? '48%' : '100%',
                             }}
+                            className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark"
                           >
                             {approvalA === ApprovalState.PENDING ? (
                               <Dots>{i18n._(t`Approving ${currencies[Field.CURRENCY_A]?.symbol}`)}</Dots>
@@ -488,13 +491,14 @@ export default function Add() {
                         )}
                         {approvalB !== ApprovalState.APPROVED && (
                           <Button
-                            color="gradient"
+                            variant="outlined"
                             size="lg"
                             onClick={approveBCallback}
                             disabled={approvalB === ApprovalState.PENDING}
                             style={{
                               width: approvalA !== ApprovalState.APPROVED ? '48%' : '100%',
                             }}
+                            className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark "
                           >
                             {approvalB === ApprovalState.PENDING ? (
                               <Dots>{i18n._(t`Approving ${currencies[Field.CURRENCY_B]?.symbol}`)}</Dots>
@@ -519,6 +523,7 @@ export default function Add() {
                         disabled={
                           !isValid || approvalA !== ApprovalState.APPROVED || approvalB !== ApprovalState.APPROVED
                         }
+                        className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark "
                       >
                         {error ?? i18n._(t`Confirm Adding Liquidity`)}
                       </Button>

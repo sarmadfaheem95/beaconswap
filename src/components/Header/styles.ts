@@ -1,1 +1,1 @@
-export const NAV_CLASS = 'w-full before:z-[-1] before:absolute before:w-full before:h-full'
+export const NAV_CLASS = 'w-full before:z-[-1] before:absolute'

@@ -226,6 +226,7 @@ const PoolDeposit = ({ currencyA, currencyB, header }) => {
               style={{
                 width: approvalB !== ApprovalState.APPROVED ? '48%' : '100%',
               }}
+              className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark"
             >
               {i18n._(t`Approve ${currencies[Field.CURRENCY_A]?.symbol}`)}
             </Button>
@@ -236,6 +237,7 @@ const PoolDeposit = ({ currencyA, currencyB, header }) => {
               loading={approvalB === ApprovalState.PENDING}
               onClick={approveBCallback}
               disabled={approvalB === ApprovalState.PENDING}
+              className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark"
             >
               {i18n._(t`Approve ${currencies[Field.CURRENCY_B]?.symbol}`)}
             </Button>
@@ -259,6 +261,7 @@ const PoolDeposit = ({ currencyA, currencyB, header }) => {
           }}
           disabled={!isValid || attemptingTxn}
           fullWidth
+          className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark"
         >
           {error ?? i18n._(t`Confirm Adding Liquidity`)}
         </Button>

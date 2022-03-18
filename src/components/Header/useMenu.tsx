@@ -28,7 +28,7 @@ export type Menu = MenuItem[]
 type UseMenu = () => Menu
 const useMenu: UseMenu = () => {
   const { i18n } = useLingui()
-  const { chainId, account } = useActiveWeb3React()
+  const { chainId } = useActiveWeb3React()
 
   return useMemo(() => {
     if (!chainId) return []
@@ -245,9 +245,8 @@ const useMenu: UseMenu = () => {
     //     icon: <WalletIcon width={20} />,
     //   })
     // }
-
     return mainItems.filter((el) => Object.keys(el).length > 0)
-  }, [account, chainId, i18n])
+  }, [chainId, i18n])
 }
 
 export default useMenu

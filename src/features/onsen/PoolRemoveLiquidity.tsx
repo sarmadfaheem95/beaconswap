@@ -302,7 +302,12 @@ const PoolWithdraw = ({ currencyA, currencyB, header }) => {
             {i18n._(t`You'll receive (at least):`)}
           </Typography>
           {(oneCurrencyIsETH || oneCurrencyIsWETH) && (
-            <Button size="xs" variant="empty" color="blue" className="rounded-none" onClick={() => setUseETH(!useETH)}>
+            <Button
+              size="xs"
+              variant="empty"
+              className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark"
+              onClick={() => setUseETH(!useETH)}
+            >
               {i18n._(t`Receive`)} {useETH && 'W'}
               {/* @ts-ignore TYPE NEEDS FIXING */}
               {NATIVE[chainId].symbol}
@@ -328,6 +333,7 @@ const PoolWithdraw = ({ currencyA, currencyB, header }) => {
           loading={approval === ApprovalState.PENDING}
           onClick={onAttemptToApprove}
           disabled={approval !== ApprovalState.NOT_APPROVED || signatureData !== null}
+          className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark"
         >
           {i18n._(t`Approve`)}
         </Button>
@@ -346,6 +352,7 @@ const PoolWithdraw = ({ currencyA, currencyB, header }) => {
             )
           }}
           disabled={!isValid || (signatureData === null && approval !== ApprovalState.APPROVED)}
+          className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark"
         >
           {error || i18n._(t`Confirm Withdrawal`)}
         </Button>

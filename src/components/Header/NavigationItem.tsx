@@ -1,5 +1,4 @@
 import { Popover, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/outline'
 import { MenuItem, MenuItemLeaf, MenuItemNode } from 'app/components/Header/useMenu'
 import Typography from 'app/components/Typography'
 import { classNames } from 'app/functions'
@@ -31,10 +30,10 @@ export const NavigationItem: FC<NavigationItem> = ({ node }) => {
       <Typography
         onClick={() => router.push(link)}
         weight={400}
-        variant="sm"
+        variant="base"
         className={classNames(
           router.asPath === link ? 'text-white' : '',
-          'hover:text-white font-400 py-5 px-2 rounded flex gap-3'
+          'hover:text-white text-white/90 font-500 py-5 px-2 rounded flex gap-3'
         )}
       >
         {!isDesktop && node.icon}
@@ -55,12 +54,15 @@ export const NavigationItem: FC<NavigationItem> = ({ node }) => {
           <Popover.Button ref={buttonRef}>
             <Typography
               weight={400}
-              variant="sm"
-              className={classNames(open ? 'text-white' : '', 'font-bold py-5 px-2 rounded flex gap-3 items-center')}
+              variant="base"
+              className={classNames(
+                open ? 'text-white' : '',
+                'hover:text-white text-white/90 py-5 px-2 rounded flex gap-3 items-center'
+              )}
             >
               {!isDesktop && node.icon}
               {node.title}
-              <ChevronDownIcon strokeWidth={5} width={12} />
+              {/* <ChevronDownIcon strokeWidth={5} width={12} /> */}
             </Typography>
           </Popover.Button>
           {node.hasOwnProperty('items') && (

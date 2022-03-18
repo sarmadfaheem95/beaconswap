@@ -149,6 +149,7 @@ const ManageBar = ({ farm }) => {
             loading={approvalState === ApprovalState.PENDING}
             color="gradient"
             onClick={approve}
+            className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark"
             disabled={approvalState !== ApprovalState.NOT_APPROVED}
           >
             {i18n._(t`Approve`)}
@@ -180,6 +181,7 @@ const ManageBar = ({ farm }) => {
               }
             }}
             disabled={!isDepositValid}
+            className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark"
           >
             {depositError || i18n._(t`Confirm Deposit`)}
           </Button>
@@ -213,6 +215,7 @@ const ManageBar = ({ farm }) => {
             }
           }}
           disabled={!isWithdrawValid}
+          className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark"
         >
           {withdrawError || i18n._(t`Confirm Withdraw`)}
         </Button>

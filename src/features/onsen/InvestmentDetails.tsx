@@ -200,7 +200,7 @@ const InvestmentDetails = ({ farm }) => {
       <Button
         loading={pendingTx}
         fullWidth
-        color="blue"
+        className="border-none bg-gradient-to-r from-pink/95 hover:from-pink to-red/95 hover:to-red text-dark"
         disabled={
           pendingTx ||
           !((pendingSushi && pendingSushi.greaterThan(ZERO)) || (pendingReward && Number(pendingReward) > 0))

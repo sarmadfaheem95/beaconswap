@@ -40,25 +40,25 @@ const HeaderNew: FC<HeaderNewProps> = ({ inputCurrency, outputCurrency }) => {
             query: getQuery(inputCurrency, outputCurrency),
           }}
         >
-          <Typography weight={700} className="text-secondary hover:text-white">
+          <Typography variant="lg" weight={500} className="text-secondary hover:text-white">
             {i18n._(t`Swap`)}
           </Typography>
         </NavLink>
-        <NavLink
+        {/* <NavLink
           activeClassName="text-high-emphesis"
           href={{
             pathname: '/limit-order',
             query: getQuery(inputCurrency, outputCurrency),
           }}
         >
-          <Typography weight={700} className="text-secondary hover:text-white">
+          <Typography variant="lg" weight={500} className="text-secondary hover:text-white">
             {i18n._(t`Limit`)}
           </Typography>
-        </NavLink>
+        </NavLink> */}
       </div>
       <div className="flex gap-4">
         {isLimitOrder && <MyOrders />}
-        <Settings className="!w-6 !h-6" />
+        <Settings className="" />
       </div>
     </div>
   )
