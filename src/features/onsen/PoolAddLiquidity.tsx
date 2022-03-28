@@ -199,7 +199,7 @@ const PoolDeposit = ({ currencyA, currencyB, header }) => {
         />
         {(oneCurrencyIsETH || oneCurrencyIsWETH) && chainId != ChainId.CELO && (
           <div className="flex justify-center">
-            <Button size="xs" variant="empty" color="blue" className="rounded-none" onClick={() => setUseETH(!useETH)}>
+            <Button size="xs" variant="outlined" color="pink" className="rounded-none" onClick={() => setUseETH(!useETH)}>
               {i18n._(t`Use`)} {useETH && 'W'}
               {/* @ts-ignore TYPE NEEDS FIXING */}
               {NATIVE[chainId].symbol} instead of {!useETH && 'W'}

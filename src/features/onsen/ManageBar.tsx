@@ -108,7 +108,7 @@ const ManageBar = ({ farm }) => {
             <Button
               variant="outlined"
               size="xs"
-              color={toggle ? 'blue' : 'pink'}
+              color={'pink'}
               key={i}
               onClick={() => {
                 toggle
@@ -122,8 +122,7 @@ const ManageBar = ({ farm }) => {
                   : undefined
               }}
               className={classNames(
-                'text-md border border-opacity-50',
-                toggle ? 'focus:ring-blue border-blue' : 'focus:ring-pink border-pink'
+                'text-md border border-opacity-50 focus:ring-pink border-pink'
               )}
             >
               {multiplier === '100' ? 'MAX' : multiplier + '%'}
