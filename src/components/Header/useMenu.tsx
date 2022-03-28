@@ -1,7 +1,7 @@
 import { GlobeIcon, SwitchVerticalIcon, TrendingUpIcon } from '@heroicons/react/outline'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { SUSHI_ADDRESS } from '@sushiswap/core-sdk'
+import { SUSHI_ADDRESS } from 'beaconswap-core-sdk'
 import { PoolIcon, RocketIcon } from 'app/components/Icon'
 import { Feature } from 'app/enums'
 import { featureEnabled } from 'app/functions'

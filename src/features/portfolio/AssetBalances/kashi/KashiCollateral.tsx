@@ -1,6 +1,6 @@
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { Currency, CurrencyAmount } from '@sushiswap/core-sdk'
+import { Currency, CurrencyAmount } from 'beaconswap-core-sdk'
 import { Fraction } from 'app/entities'
 import { KashiMarket } from 'app/features/kashi/types'
 import { useKashiPositions } from 'app/features/portfolio/AssetBalances/kashi/hooks'

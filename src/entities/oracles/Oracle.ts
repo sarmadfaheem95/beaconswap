@@ -1,4 +1,4 @@
-import { ChainId } from '@sushiswap/core-sdk'
+import { ChainId } from 'beaconswap-core-sdk'
 
 export abstract class Oracle {
   chainId = ChainId.ETHEREUM

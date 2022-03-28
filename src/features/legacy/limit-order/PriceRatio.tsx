@@ -1,4 +1,4 @@
-import { Currency, Price } from '@sushiswap/core-sdk'
+import { Currency, Price } from 'beaconswap-core-sdk'
 import { FC, useState } from 'react'
 
 interface PriceRatio {
