@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from 'beaconswap-core-sdk'
+import { Currency, CurrencyAmount } from '@sushiswap/core-sdk'
 
 export interface Assets {
   asset: CurrencyAmount<Currency>

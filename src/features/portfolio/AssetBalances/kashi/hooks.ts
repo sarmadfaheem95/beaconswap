@@ -1,5 +1,5 @@
 import { AddressZero } from '@ethersproject/constants'
-import { Currency, CurrencyAmount, JSBI, Token } from 'beaconswap-core-sdk'
+import { Currency, CurrencyAmount, JSBI, Token } from '@sushiswap/core-sdk'
 import { useKashiPairAddresses, useKashiPairsForAccount } from 'app/features/kashi/hooks'
 import useSearchAndSort from 'app/hooks/useSearchAndSort'
 import { useActiveWeb3React } from 'app/services/web3'

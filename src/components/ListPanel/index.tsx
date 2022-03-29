@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, ZERO } from 'beaconswap-core-sdk'
+import { Currency, CurrencyAmount, ZERO } from '@sushiswap/core-sdk'
 import { classNames } from 'app/functions'
 import { useUSDCValue } from 'app/hooks/useUSDCPrice'
 import React, { FC, ReactNode } from 'react'

@@ -1,5 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { ChainId, Currency, CurrencyAmount, Pair, Trade as LegacyTrade, TradeType, WNATIVE } from 'beaconswap-core-sdk'
+import { ChainId, Currency, CurrencyAmount, Pair, Trade as LegacyTrade, TradeType } from '@sushiswap/core-sdk'
+import { WNATIVE } from 'beaconswap-core-sdk'
 import { MultiRoute, RouteStatus } from '@sushiswap/tines'
 import {
   ConstantProductPool,

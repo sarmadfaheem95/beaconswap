@@ -1,4 +1,4 @@
-import { ChainId } from 'beaconswap-core-sdk'
+import { ChainId } from '@sushiswap/core-sdk'
 
 const RPC = {
   [ChainId.ETHEREUM]: 'https://api.sushirelay.com/v1',

@@ -3,7 +3,9 @@ import { Contract } from '@ethersproject/contracts'
 import {
   ChainId,
   CurrencyAmount,
-  JSBI,
+  JSBI
+} from '@sushiswap/core-sdk'
+import {
   MASTERCHEF_ADDRESS,
   MASTERCHEF_V2_ADDRESS,
   MINICHEF_ADDRESS,

@@ -7,7 +7,7 @@ import ListPanel from 'app/components/ListPanel'
 import { HeadlessUiModal } from 'app/components/Modal'
 import Typography from 'app/components/Typography'
 import useLimitOrderExecute from 'app/features/legacy/limit-order/useLimitOrderExecute'
-import TradePrice from 'app/features/legacy/swap/TradePrice'
+// import TradePrice from 'app/features/legacy/swap/TradePrice'
 import { isAddress, shortenAddress } from 'app/functions'
 import { useAppDispatch } from 'app/state/hooks'
 import { setLimitOrderShowReview } from 'app/state/limit-order/actions'
@@ -96,12 +96,12 @@ const LimitOrderReviewModal: FC<LimitOrderReviewModal> = ({ parsedAmounts, trade
               <Typography variant="sm" weight={700}>
                 {i18n._(t`Rate`)}
               </Typography>
-              <TradePrice
+              {/* <TradePrice
                 price={limitPrice}
                 showInverted={inverted}
                 setShowInverted={setInverted}
                 className="justify-end text-primary"
-              />
+              /> */}
             </div>
             {deviation && (
               <div className="flex justify-end">

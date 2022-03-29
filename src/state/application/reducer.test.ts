@@ -1,4 +1,4 @@
-import { ChainId } from 'beaconswap-core-sdk'
+import { ChainId } from '@sushiswap/core-sdk'
 import { createStore, Store } from 'redux'
 
 import { addPopup, ApplicationModal, removePopup, setOpenModal, updateBlockNumber } from './actions'

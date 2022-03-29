@@ -1,7 +1,7 @@
 import { SwitchVerticalIcon } from '@heroicons/react/outline'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { Percent } from 'beaconswap-core-sdk'
+import { Percent } from '@sushiswap/core-sdk'
 import limitOrderPairList from '@sushiswap/limit-order-pair-list/dist/limit-order.pairlist.json'
 import RecipientField from 'app/components/RecipientField'
 import Typography from 'app/components/Typography'
@@ -9,7 +9,7 @@ import { ZERO_PERCENT } from 'app/constants'
 import { Feature } from 'app/enums'
 import LimitOrderApprovalCheck from 'app/features/legacy/limit-order/LimitOrderApprovalCheck'
 import LimitOrderButton from 'app/features/legacy/limit-order/LimitOrderButton'
-import LimitOrderReviewModal from 'app/features/legacy/limit-order/LimitOrderReviewModal'
+// import LimitOrderReviewModal from 'app/features/legacy/limit-order/LimitOrderReviewModal'
 import LimitPriceInputPanel from 'app/features/legacy/limit-order/LimitPriceInputPanel'
 import OrderExpirationDropdown from 'app/features/legacy/limit-order/OrderExpirationDropdown'
 import HeaderNew from 'app/features/trade/HeaderNew'
@@ -138,11 +138,11 @@ const LimitOrder = () => {
 
         {isExpertMode && <RecipientField recipient={recipient} action={setRecipient} />}
         <LimitOrderButton trade={trade} parsedAmounts={parsedAmounts} />
-        <LimitOrderReviewModal
+        {/* <LimitOrderReviewModal
           parsedAmounts={parsedAmounts}
           trade={trade}
           limitPrice={!!rate ? rate : trade?.executionPrice}
-        />
+        /> */}
       </SwapLayoutCard>
       <Typography variant="xs" className="px-10 mt-5 italic text-center text-low-emphesis">
         {i18n._(t`Limit orders use funds from BentoBox, to create a limit order depositing into BentoBox is required.`)}

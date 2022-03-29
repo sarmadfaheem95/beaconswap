@@ -1,5 +1,5 @@
-import { Currency, TradeType } from 'beaconswap-core-sdk'
-import { Trade as LegacyTrade } from 'beaconswap-core-sdk/dist/entities/Trade'
+import { Currency, TradeType } from '@sushiswap/core-sdk'
+import { Trade as LegacyTrade } from '@sushiswap/core-sdk/dist/entities/Trade'
 import { PoolState, Trade } from '@sushiswap/trident-sdk'
 
 export type TradeUnion =

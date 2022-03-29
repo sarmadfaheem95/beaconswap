@@ -1,15 +1,17 @@
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import {
+  WNATIVE_ADDRESS,
+  SUSHI_ADDRESS
+} from 'beaconswap-core-sdk'
+import {
   ChainId,
   Currency,
   CurrencyAmount,
   Percent,
-  SUSHI_ADDRESS,
   Trade as V2Trade,
   TradeType,
-  WNATIVE_ADDRESS,
-} from 'beaconswap-core-sdk'
+} from '@sushiswap/core-sdk'
 import { tryParseAmount } from 'app/functions/parse'
 import { isAddress } from 'app/functions/validate'
 import { useCurrency } from 'app/hooks/Tokens'

@@ -1,4 +1,4 @@
-import { Currency, Trade as V2Trade, TradeType, TradeVersion } from 'beaconswap-core-sdk'
+import { Currency, Trade as V2Trade, TradeType, TradeVersion } from '@sushiswap/core-sdk'
 import { Trade as V3Trade } from '@sushiswap/trident-sdk'
 
 export function getTradeVersion(

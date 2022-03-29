@@ -1,6 +1,7 @@
 import { arrayify } from '@ethersproject/bytes'
 import { parseBytes32String } from '@ethersproject/strings'
-import { ChainId, Currency, NATIVE, Token, WNATIVE, WNATIVE_ADDRESS } from 'beaconswap-core-sdk'
+import { NATIVE, WNATIVE, WNATIVE_ADDRESS } from 'beaconswap-core-sdk'
+import { ChainId, Currency, Token } from '@sushiswap/core-sdk'
 import { createTokenFilterFunction } from 'app/functions/filtering'
 import { isAddress } from 'app/functions/validate'
 import { useActiveWeb3React } from 'app/services/web3'

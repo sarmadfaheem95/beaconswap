@@ -1,4 +1,5 @@
-import { ChainId, SUSHI_ADDRESS } from 'beaconswap-core-sdk'
+import { SUSHI_ADDRESS } from 'beaconswap-core-sdk'
+import { ChainId } from '@sushiswap/core-sdk'
 import TimespanGraph from 'app/components/TimespanGraph'
 import { XSUSHI } from 'app/config/tokens'
 import AnalyticsContainer from 'app/features/analytics/AnalyticsContainer'
