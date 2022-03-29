@@ -156,7 +156,7 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
       <Button
         variant="empty"
         className={classNames(
-          'flex items-center justify-between w-full px-4 py-6 cursor-pointer bg-dark-800 hover:bg-dark-700 !text-blue',
+          'flex items-center justify-between w-full px-4 py-6 cursor-pointer bg-dark-800 hover:bg-dark-700 !text-white',
           showMore && '!bg-dark-800'
         )}
         style={{ boxShadow: 'none' }}
@@ -168,7 +168,7 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
             {!currency0 || !currency1 ? <Dots>{i18n._(t`Loading`)}</Dots> : `${currency0.symbol}/${currency1.symbol}`}
           </div>
         </div>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 text-primary">
           {i18n._(t`Manage`)}
           {showMore ? (
             <ChevronUpIcon width="20px" height="20px" className="ml-4" />

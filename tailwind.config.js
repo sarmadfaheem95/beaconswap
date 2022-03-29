@@ -128,7 +128,7 @@ module.exports = {
           800: '#BD8400',
           900: '#855D00',
         },
-
+        'white': '#fff',
         'opaque-blue': '#0993ec80',
         'transparent-blue': '#0993EC2A',
         'transparent-pink': '#FE5A752A',
