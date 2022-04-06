@@ -20,9 +20,9 @@ const FarmListItem: FC<FarmListItem> = ({ farm, onClick }) => {
   const { i18n } = useLingui()
   const token0 = useCurrency(farm.pair.token0.id) ?? undefined
   const token1 = useCurrency(farm.pair.token1.id) ?? undefined
-
+debugger
   return (
-    <div className={classNames(TABLE_TBODY_TR_CLASSNAME, 'grid grid-cols-4')} onClick={onClick}>
+    <div className={classNames(TABLE_TBODY_TR_CLASSNAME, 'grid grid-cols-3')} onClick={onClick}>
       <div className={classNames('flex gap-2', TABLE_TBODY_TD_CLASSNAME(0, 4))}>
         {token0 && token1 && <CurrencyLogoArray currencies={[token0, token1]} dense size={32} />}
         <div className="flex flex-col items-start">
@@ -43,11 +43,11 @@ const FarmListItem: FC<FarmListItem> = ({ farm, onClick }) => {
           )}
         </div>
       </div>
-      <div className={TABLE_TBODY_TD_CLASSNAME(1, 4)}>
+      {/* <div className={TABLE_TBODY_TD_CLASSNAME(1, 4)}>
         <Typography weight={700} className="text-high-emphesis">
           {formatNumber(farm.tvl, true)}
         </Typography>
-      </div>
+      </div> */}
       <div className={classNames('flex flex-col !items-end !justify-center', TABLE_TBODY_TD_CLASSNAME(2, 4))}>
         {/* @ts-ignore TYPE NEEDS FIXING */}
         {farm?.rewards?.map((reward, i) => (

@@ -17,6 +17,7 @@ export default function useMasterChef(chef: Chef) {
   // Deposit
   const deposit = useCallback(
     async (pid: number, amount: BigNumber) => {
+      debugger
       try {
         let tx
 

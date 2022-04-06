@@ -159,6 +159,7 @@ const ManageBar = ({ farm }) => {
             fullWidth
             color={!isDepositValid && !!parsedDepositValue ? 'red' : 'blue'}
             onClick={async () => {
+            debugger
               try {
                 // KMP decimals depend on asset, SLP is always 18
                 // @ts-ignore TYPE NEEDS FIXING

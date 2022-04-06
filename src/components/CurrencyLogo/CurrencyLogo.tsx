@@ -116,18 +116,18 @@ const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({ currency, size = '
   )
 
   const srcs: string[] = useMemo(() => {
-    if (currency?.isNative || currency?.equals(WNATIVE[currency.chainId])) {
-      // @ts-ignore TYPE NEEDS FIXING
-      return [LOGO[currency.chainId], UNKNOWN_ICON]
-    }
+    // if (currency?.isNative || currency?.equals(WNATIVE[currency.chainId])) {
+    //   // @ts-ignore TYPE NEEDS FIXING
+    //   return [LOGO[currency.chainId], UNKNOWN_ICON]
+    // }
 
-    if (currency?.isToken) {
-      const defaultUrls = [...getCurrencyLogoUrls(currency)]
-      if (currency instanceof WrappedTokenInfo) {
-        return [...uriLocations, ...defaultUrls, UNKNOWN_ICON]
-      }
-      return defaultUrls
-    }
+    // if (currency?.isToken) {
+    //   const defaultUrls = [...getCurrencyLogoUrls(currency)]
+    //   if (currency instanceof WrappedTokenInfo) {
+    //     return [...uriLocations, ...defaultUrls, UNKNOWN_ICON]
+    //   }
+    //   return defaultUrls
+    // }
 
     return [UNKNOWN_ICON]
   }, [currency, uriLocations])
