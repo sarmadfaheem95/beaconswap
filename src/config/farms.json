@@ -1,0 +1,70 @@
+[
+  {
+    "id": "0",
+    "pair": {
+      "id": "0x8Ca74d649dc7faFDECfae2bCFDF1f8cB27f082b5",
+      "token0": {
+        "id": "0xacc15dc74880c9944775448304b263d191c6077f",
+        "name": "Wrapped GLMR",
+        "symbol": "WGLMR",
+        "totalSupply": "20360",
+        "derivedETH": "0"
+      },
+      "token1": {
+        "id": "0x8f2C7218f6b2c162b8bA60B5536E2830BaF0Ce4e",
+        "name": "BEACON",
+        "symbol": "BEACON",
+        "totalSupply": "20360",
+        "derivedETH": "0"
+      }
+    
+    },
+    "rewarder": {
+      "id": "0x5AC28eC801d6C5f2c438Ff5e79b18157e2403dce",
+      "rewardToken": "0x8f2C7218f6b2c162b8bA60B5536E2830BaF0Ce4e",
+      "rewardPerSecond": "1000000000000000000"
+    },
+    "allocPoint": "1000",
+    "lastRewardTime": "1646163102",
+    "accSushiPerShare": "0",
+    "slpBalance": "16005132767",
+    "userCount": "1",
+    "miniChef": {
+      "id": "0x0Ce2cE45563BfcAd73a3d874dAF21Fd2E582E364",
+      "sushiPerSecond": "1000000",
+      "totalAllocPoint": "1000"
+    },
+    "chef": 2,
+  
+    "rewards": [
+      {
+        "currency": {
+          "chainId": 1,
+          "decimals": 18,
+          "symbol": "SUSHI",
+          "name": "SushiToken",
+          "isNative": false,
+          "isToken": true,
+          "address": "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2"
+        },
+        "rewardPerBlock": 0,
+        "rewardPerDay": 0,
+        "rewardPrice": 3.9433512903278203
+      },
+      {
+        "currency": {
+          "chainId": 1284,
+          "decimals": 18,
+          "symbol": "GLMR",
+          "name": "Glimmer",
+          "isNative": true,
+          "isToken": false
+        },
+        "rewardPerBlock": 0,
+        "rewardPerDay": 0,
+        "rewardPrice": 0
+      }
+    ],
+    "tvl": 0
+  }
+]

@@ -5321,10 +5321,10 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-beaconswap-core-sdk@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/beaconswap-core-sdk/-/beaconswap-core-sdk-1.0.0.tgz#036df3ac24f3bccffc93b847e2c58609f1c6f667"
-  integrity sha512-HnfjF17XyFikEv+u5JAjjrykVw0Gzn/0lmK07BEQnydUz8yPVJMIBd6vr/8x9i5mhOsFj6OlUCYPCdKwf6yzYg==
+beaconswap-core-sdk@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/beaconswap-core-sdk/-/beaconswap-core-sdk-1.0.1.tgz#845e8cbfc167c23b473a1900da109bd88acad06c"
+  integrity sha512-sqQp0xyO/hxZmiuXZIyrQJFkF4VKMW59sf07YDT1JhRodK0oJsQDVMZbaG39pWdlI7YOvX5qbYLOCjE90SLJYg==
   dependencies:
     "@ethersproject/address" "^5.4.0"
     "@ethersproject/bignumber" "^5.4.0"

@@ -24,6 +24,7 @@ export default function useMasterChef(chef: Chef) {
         if (chef === Chef.MASTERCHEF) {
           tx = await contract?.deposit(pid, amount)
         } else {
+          console.log(contract, "--- contract")
           tx = await contract?.deposit(pid, amount, account)
         }
 

@@ -38,6 +38,8 @@ const APPROVAL_ADDRESSES = {
     [ChainId.MOONRIVER]: MINICHEF_ADDRESS[ChainId.MOONRIVER],
     [ChainId.FUSE]: MINICHEF_ADDRESS[ChainId.FUSE],
     [ChainId.FANTOM]: MINICHEF_ADDRESS[ChainId.FANTOM],
+    [ChainId.MOONBEAM]: MINICHEF_ADDRESS[ChainId.MOONBEAM],
+
   },
   [Chef.OLD_FARMS]: {
     [ChainId.CELO]: OLD_FARMS[ChainId.CELO],
@@ -66,8 +68,13 @@ const ManageBar = ({ farm }) => {
   const parsedDepositValue = tryParseAmount(depositValue, liquidityToken)
   const parsedWithdrawValue = tryParseAmount(withdrawValue, liquidityToken)
   // @ts-ignore TYPE NEEDS FIXING
-  const [approvalState, approve] = useApproveCallback(parsedDepositValue, APPROVAL_ADDRESSES[farm.chef][chainId])
+  const [approvalState, approve] = useApproveCallback(parsedDepositValue, "0x0Ce2cE45563BfcAd73a3d874dAF21Fd2E582E364")
+  // const [approvalState, approve] = useApproveCallback(parsedDepositValue, APPROVAL_ADDRESSES[farm.chef][chainId])
 
+  console.log(APPROVAL_ADDRESSES);
+  
+  console.log("approvalState",approvalState, "parsedDepositValue", parsedDepositValue, " APPROVAL_ADDRESSES[farm.chef][chainId]", farm?.chef ," ddd" ,chainId);
+  
   const depositError = !parsedDepositValue
     ? 'Enter an amount'
     : balance?.lessThan(parsedDepositValue)

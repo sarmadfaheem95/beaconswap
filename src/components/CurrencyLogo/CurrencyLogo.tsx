@@ -1,6 +1,7 @@
 import { ChainId, Currency, WNATIVE } from '@sushiswap/core-sdk'
 import useHttpLocations from 'app/hooks/useHttpLocations'
 import { WrappedTokenInfo } from 'app/state/lists/wrappedTokenInfo'
+import _ from 'lodash'
 import React, { FunctionComponent, useMemo } from 'react'
 
 import Logo, { UNKNOWN_ICON } from '../Logo'
@@ -114,24 +115,33 @@ const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({ currency, size = '
   const uriLocations = useHttpLocations(
     currency instanceof WrappedTokenInfo ? currency.logoURI || currency.tokenInfo.logoURI : undefined
   )
+  // console.log("ccccccc",currency);
+  // console.log("WNATIVE[currency.chainId]",currency && currency.chainId)
 
   const srcs: string[] = useMemo(() => {
+        
+    if (currency && (currency?.isNative || _.isEqual(currency, WNATIVE[currency?.chainId]))) {
+      // @ts-ignore TYPE NEEDS FIXING
+      return [LOGO[currency.chainId], UNKNOWN_ICON]
+    }
     // if (currency?.isNative || currency?.equals(WNATIVE[currency.chainId])) {
     //   // @ts-ignore TYPE NEEDS FIXING
     //   return [LOGO[currency.chainId], UNKNOWN_ICON]
     // }
 
-    // if (currency?.isToken) {
-    //   const defaultUrls = [...getCurrencyLogoUrls(currency)]
-    //   if (currency instanceof WrappedTokenInfo) {
-    //     return [...uriLocations, ...defaultUrls, UNKNOWN_ICON]
-    //   }
-    //   return defaultUrls
-    // }
+
+    if (currency?.isToken) {
+      const defaultUrls = [...getCurrencyLogoUrls(currency)]
+      if (currency instanceof WrappedTokenInfo) {
+        return [...uriLocations, ...defaultUrls, UNKNOWN_ICON]
+      }
+      return defaultUrls
+    }
 
     return [UNKNOWN_ICON]
   }, [currency, uriLocations])
-
+  // console.log("ssssssssss",srcs);
+  
   return <Logo srcs={srcs} width={size} height={size} alt={currency?.symbol} className={className} style={style} />
 }
 

@@ -71,6 +71,7 @@ const InvestmentDetails = ({ farm }) => {
 
   const pendingSushi = usePendingSushi(farm)
   const pendingReward = usePendingReward(farm)
+  console.log("pendingReward",pendingReward);
 
   const positionFiatValue = CurrencyAmount.fromRawAmount(
     // @ts-ignore TYPE NEEDS FIXING
@@ -107,6 +108,7 @@ const InvestmentDetails = ({ farm }) => {
     }
     setPendingTx(false)
   }
+  
 
   return (
     <>

@@ -166,7 +166,9 @@ export function useMasterChefV2Contract(withSignerIfPossible?: boolean): Contrac
 }
 export function useMiniChefContract(withSignerIfPossible?: boolean): Contract | null {
   const { chainId } = useActiveWeb3React()
-  return useContract(chainId ? MINICHEF_ADDRESS[chainId] : undefined, MINICHEF_ABI, withSignerIfPossible)
+  return useContract("0x0Ce2cE45563BfcAd73a3d874dAF21Fd2E582E364", MINICHEF_ABI, withSignerIfPossible)
+  // return useContract(chainId ? MINICHEF_ADDRESS[chainId] : undefined, MINICHEF_ABI, withSignerIfPossible)
+
 }
 
 export function useFactoryContract(): Contract | null {

@@ -20,7 +20,6 @@ const FarmListItem: FC<FarmListItem> = ({ farm, onClick }) => {
   const { i18n } = useLingui()
   const token0 = useCurrency(farm.pair.token0.id) ?? undefined
   const token1 = useCurrency(farm.pair.token1.id) ?? undefined
-debugger
   return (
     <div className={classNames(TABLE_TBODY_TR_CLASSNAME, 'grid grid-cols-3')} onClick={onClick}>
       <div className={classNames('flex gap-2', TABLE_TBODY_TD_CLASSNAME(0, 4))}>
