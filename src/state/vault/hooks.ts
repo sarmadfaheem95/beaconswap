@@ -104,15 +104,15 @@ export function useFetchVaultsData() {
   // const results = useMultipleContractSingleData(earnedAddresses, VAULT_INTERFACE, 'getPricePerFullShare');
   // const { result } = useSingleCallResult(contract, "getPricePerFullShare");
   const earnedAddresses = pools.map((el: any) => el.earnedTokenAddress);
-  const vaultsData = useMemo(
-    () =>
-      useMultipleContractSingleData(
-        earnedAddresses,
-        VAULT_INTERFACE,
-        "getPricePerFullShare"
-      ),
-    [pools, latestBlockNumber]
-  );
+  // const vaultsData = useMemo(
+  //   () =>
+  //     useMultipleContractSingleData(
+  //       earnedAddresses,
+  //       VAULT_INTERFACE,
+  //       "getPricePerFullShare"
+  //     ),
+  //   [pools, latestBlockNumber]
+  // );
   const fetchVaultsData = useCallback(() => {
     console.log("asd");
   }, []);
