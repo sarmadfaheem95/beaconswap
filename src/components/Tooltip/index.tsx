@@ -35,7 +35,7 @@ export default function Tooltip({ text, children, className, ...rest }: TooltipP
 
 export function TooltipContent({ content, children, ...rest }: TooltipContentProps) {
   return (
-    <Popover content={<div className="w-64 py-[0.6rem] px-4 break-words">{content}</div>} {...rest}>
+    <Popover content={<div className="py-[0.6rem] px-4 break-words">{content}</div>} {...rest}>
       {children}
     </Popover>
   )

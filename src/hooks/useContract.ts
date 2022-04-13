@@ -65,6 +65,7 @@ import ZENKO_ABI from 'app/constants/abis/zenko.json'
 import { getContract } from 'app/functions'
 import { useActiveWeb3React } from 'app/services/web3'
 import { useMemo } from 'react'
+import { vaultABI } from 'app/config/vault/abi'
 
 const UNI_FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
 
@@ -84,6 +85,14 @@ export function useContract(address: string | undefined, ABI: any, withSignerIfP
       return null
     }
   }, [address, ABI, library, withSignerIfPossible, account])
+}
+
+export function useVaultMultiContract(): Contract | null {
+  return useContract('0xC9F6b1B53E056fd04bE5a197ce4B2423d456B982', vaultABI)
+}
+
+export function useVaultContract(earnedTokenAddress?: string, withSignerIfPossible?: boolean): Contract | null {
+  return useContract(earnedTokenAddress, vaultABI, withSignerIfPossible)
 }
 
 export function useTokenContract(tokenAddress?: string, withSignerIfPossible?: boolean): Contract | null {

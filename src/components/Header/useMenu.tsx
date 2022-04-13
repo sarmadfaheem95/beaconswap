@@ -157,6 +157,14 @@ const useMenu: UseMenu = () => {
       mainItems.push(farmItems)
     }
 
+    if (featureEnabled("Vaults", chainId)) {
+      mainItems.push({
+        key: 'vaults',
+        title: i18n._(t`Vault`),
+        link: '/vaults',
+      })
+    }
+
     if (featureEnabled(Feature.KASHI, chainId)) {
       mainItems.push({
         key: 'lending',

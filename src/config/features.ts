@@ -1,7 +1,7 @@
 import { ChainId } from '@sushiswap/core-sdk'
 import { Feature } from 'app/enums'
 
-type FeatureMap = { readonly [chainId in ChainId]?: Feature[] }
+type FeatureMap = { readonly [chainId in ChainId]?: String[] }
 
 const features: FeatureMap = {
   [ChainId.ETHEREUM]: [
@@ -61,7 +61,7 @@ const features: FeatureMap = {
   [ChainId.CELO]: [Feature.AMM, Feature.LIQUIDITY_MINING, Feature.ANALYTICS],
   [ChainId.ARBITRUM]: [Feature.AMM, Feature.LIQUIDITY_MINING, Feature.ANALYTICS, Feature.BENTOBOX, Feature.KASHI],
   [ChainId.FUSE]: [Feature.AMM, Feature.LIQUIDITY_MINING, Feature.ANALYTICS],
-  [ChainId.MOONBEAM]: [Feature.AMM, Feature.LIQUIDITY_MINING],
+  [ChainId.MOONBEAM]: [Feature.AMM, Feature.LIQUIDITY_MINING, "Vaults"],
 }
 
 export default features

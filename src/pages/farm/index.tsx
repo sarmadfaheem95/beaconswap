@@ -87,7 +87,7 @@ export default function Farm(): JSX.Element {
         <div className="flex flex-col w-full gap-6">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <Search search={search} term={term} />
-            <OnsenFilter />
+            {/* <OnsenFilter /> */}
           </div>
           <FarmList farms={FarmsArray} term={term} />
           {chainId && chainId === ChainId.CELO && (

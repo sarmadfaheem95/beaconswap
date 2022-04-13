@@ -21,6 +21,7 @@ import slippage from './slippage/slippageSlice'
 import swap from './swap/reducer'
 import transactions from './transactions/reducer'
 import user from './user/reducer'
+import vault from './vault/reducer'
 
 const reducer = combineReducers({
   application,
@@ -35,6 +36,7 @@ const reducer = combineReducers({
   onsen,
   slippage,
   swap,
+  vault,
   transactions,
   tridentSwap,
   tridentAdd,
