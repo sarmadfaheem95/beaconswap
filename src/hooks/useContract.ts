@@ -96,7 +96,7 @@ export function useVaultContract(earnedTokenAddress?: string, withSignerIfPossib
 }
 
 export function useTokenContract(tokenAddress?: string, withSignerIfPossible?: boolean): Contract | null {
-  return useContract(tokenAddress, ERC20_ABI, withSignerIfPossible)
+  return useContract(tokenAddress, ERC20_ABI, withSignerIfPossible) // abi for allowance
 }
 
 export function useWETH9Contract(withSignerIfPossible?: boolean): Contract | null {

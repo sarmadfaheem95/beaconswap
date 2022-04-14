@@ -54,6 +54,8 @@ export const decimalFormatter = new Intl.NumberFormat('en-US', {
   maximumSignificantDigits: 4,
 })
 
+const units = ['', 'k', 'M', 'B', 'T', 'Q', 'Q', 'S', 'S'];
+
 // @ts-ignore TYPE NEEDS FIXING
 export function formatPercent(percentString) {
   const percent = parseFloat(percentString)
@@ -86,6 +88,24 @@ export function formatPercent(percentString) {
     return `${fixedPercent}%`
   }
 }
+
+// @ts-ignore TYPE NEEDS FIXING
+export const formatTvl = (tvl, oraclePrice, useOrder = true) => {
+  debugger
+  if (oraclePrice) {
+    // @ts-ignore TYPE NEEDS FIXING
+    tvl = (Number(tvl) * oraclePrice).toFixed(2);
+  }
+
+  let order = Math.floor(Math.log10(tvl) / 3);
+  if (order < 0 || useOrder === false) {
+    order = 0;
+  }
+
+  const num = tvl / 1000 ** order;
+
+  return '$' + num.toFixed(2) + units[order];
+};
 
 export const formatNumber = (number: any, usd = false, scale = true, decimals = 0) => {
   if (isNaN(number) || number === '' || number === undefined) {
